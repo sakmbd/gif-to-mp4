@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "An app to convert gif to mp4",
   "productName": "Gif to Mp4",
-  "author": "Shakeel Ahamed <shakeel_ahamed@circles.asia>",
+  "author": "Shakeel Ahamed <sakmbd@gmail.com>",
   "type": "module",
   "private": true,
   "scripts": {
