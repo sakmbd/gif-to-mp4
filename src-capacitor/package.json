@@ -1,0 +1,13 @@
+{
+  "name": "gif-to-mp4-app",
+  "version": "0.0.1",
+  "description": "An app to convert gif to mp4",
+  "author": "Shakeel Ahamed <sakmbd@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^7.4.2",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  }
+}
