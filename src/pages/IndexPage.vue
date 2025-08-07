@@ -107,7 +107,9 @@
               <q-icon name="check" color="green" size="sm" />
             </q-item-section>
             <q-item-section side>
-              <q-btn flat round icon="download" @click="downloadFile(file)" />
+              <q-btn round dense flat icon="download" size="md" @click="downloadFile(file)">
+                <q-tooltip>Download</q-tooltip>
+              </q-btn>
             </q-item-section>
           </q-item>
         </q-list>
@@ -209,6 +211,8 @@ const addGifFromUrl = async () => {
 const ffmpeg = createFFmpeg({
   log: true,
   corePath: '/ffmpeg/ffmpeg-core.js',
+  wasmPath: '/ffmpeg/ffmpeg-core.wasm',
+  workerPath: '/ffmpeg/ffmpeg-core.worker.js',
   progress: ({ ratio }) => {
     console.log(`Progress: ${(ratio * 100).toFixed(2)}%`)
   },
@@ -356,9 +360,6 @@ const truncateName = (name, limit = 12) =>
 .floating-input:hover {
   transform: scale(1.05);
   background: rgba(var(--q-primary-rgb), 0.2);
-}
-.q-btn ::v-deep(.q-icon) {
-  margin-right: 10px;
 }
 
 @media (max-width: 600px) {
