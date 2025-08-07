@@ -12,7 +12,9 @@
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
     "build": "npx quasar build -m pwa",
-    "postinstall": "quasar prepare"
+    "postinstall": "quasar prepare",
+    "serve:pwa": "npx serve -s dist/pwa -c headers.json",
+    "serve:pwaRender": "npx serve -s dist/pwa -c headers.json -l $PORT"
   },
   "dependencies": {
     "@ffmpeg/core": "^0.11.0",
